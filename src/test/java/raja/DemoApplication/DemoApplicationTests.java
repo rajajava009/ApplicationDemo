@@ -60,32 +60,32 @@ public class DemoApplicationTests {
 	@Test
 	public void  deleteStationTest() {
 		Station station = new Station();
-		station.setStationId("station-id-test-11");
+		station.setStationId("station-id-test-8");
 		station.setHdEnabled(false);
-		station.setName("test-11");
-		station.setCallSign("call-sign-test-11");
+		station.setName("test-8");
+		station.setCallSign("call-sign-test-8");
 		stationRepository.save(station);
-		Station station1 = stationRepository.findByStationId("station-id-test-11");
+		Station station1 = stationRepository.findByStationId("station-id-test-8");
 		Assert.assertNotNull(station1);
 		stationRepository.delete(station1.getStationId());
-		Station station2 = stationRepository.findByStationId("station-id-test-11");
+		Station station2 = stationRepository.findByStationId("station-id-test-8");
 		Assert.assertNull(station2);
 	}
 
 	@Test
 	public void getStationByName() {
 		Station station = new Station();
-		station.setStationId("station-id-test-12");
+		station.setStationId("station-id-test-10");
 		station.setHdEnabled(false);
-		station.setName("test-12");
-		station.setCallSign("call-sign-test-12");
+		station.setName("test-10");
+		station.setCallSign("call-sign-test-10");
 		stationRepository.save(station);
-		Station station1 = stationRepository.findByStationId("station-id-test-12");
+		Station station1 = stationRepository.findByStationId("station-id-test-10");
 		Assert.assertNotNull(station1);
-		Assert.assertEquals("Verifying Station ID", "station-id-test-12", station1.getStationId());
-		Assert.assertEquals("Verifying Call Sign", "call-sign-test-12", station1.getCallSign());
+		Assert.assertEquals("Verifying Station ID", "station-id-test-10", station1.getStationId());
+		Assert.assertEquals("Verifying Call Sign", "call-sign-test-10", station1.getCallSign());
 		Assert.assertFalse("Verifying HD is disabled", station1.isHdEnabled());
-		Assert.assertEquals("Verifying name", "test-12", station1.getName());
+		Assert.assertEquals("Verifying name", "test-10", station1.getName());
 	}
 
 
