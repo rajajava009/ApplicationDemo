@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class DemoApplicationTests {
 
 	@Autowired
-	private IStationRepository stationRepository;
+	private IhStationRepository stationRepository;
 
 	@Test
 	public void contextLoads() {
